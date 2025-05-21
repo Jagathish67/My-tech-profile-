@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JAGATHISH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      animation: slideDown 5s ease-out;
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: #1a1a2e;
+    }
+
+    .home img {
+      width: 200px;
+      height: 200px;
+      font-size: 2.5rem;
+      animation: slideDown 5s ease-out;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      animation: float 4s ease-in-out infinite;
+      white-space: nowrap;
+    
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .home .details {
+      max-width: 500px;
+      animation: fadeIn 1.5s ease-in;
+      flex: 0 0 auto;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      animation: scrollText  30s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #f39c12;
+    }
+
+    .horizontal-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      background: #f39c12;
+      border-radius: 10px;
+    }
+
+    .achievement-img, .extracurriculars-img {
+      height: 500px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex: 0 0 auto;
+      transition: transform 0.3s ease;
+      flex: 0 0 auto;
+      padding: 1rem 2rem;
+      background: #222;
+      border-radius: 10px;
+      animation: scrollText  30s linear infinite;
+      white-space: nowrap;
+    }
+    
+
+    .achievement-img:hover, .extracurriculars-img:hover {
+      transform: scale(1.1);
+    }
+
+    .text-scroll p, .skills p {
+      flex: 0 0 auto;
+      padding: 1rem 2rem;
+      background: #222;
+      border-radius: 10px;
+      animation: scrollText  30s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .text-scroll, .skills {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .about {
+      background: #1e1e1e;
+      border-left: 4px solid #f39c12;
+      padding: 2rem;
+      margin-top: 1rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: #141414;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .text-scroll p, .skills p {
+        font-size: 14px;
+      }
+
+      .home {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>welcome to My Profile</h1>
+</header>
+
+<section class="home" id="home">
+  <img src="my.jpg" alt="Profile Image">
+  <div class="details">
+    <h2>Hello, I'm jagathish</h2>
+    <p>AI & Data Science Student | Web Developer | Creative Thinker </p>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="horizontal-scroll">
+    <img src="jackachiv.jpg" class="achievement-img" alt="Achievement 1">
+    
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="text-scroll">
+    <p>👉 Sign Language Navigator &nbsp;&nbsp;|&nbsp;&nbsp; Emotion Detector AI &nbsp;&nbsp;|&nbsp;&nbsp; Sentiment Analysis App &nbsp;&nbsp;|&nbsp;&nbsp; Quote Generator</p>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Courses</h2>
+  <div class="horizontal-scroll">
+    <img src="oii.jpg" class="achievement-img" alt="Achievement 1">
+    <img src="hai2.jpg" class="achievement-img" alt="Achievement 1">
+    <img src="dai.jpg" class="achievement-img" alt="Achievement 1">
+    <img src="orcal.png" class="achievement-img" alt="Achievement 1">
+    <img src="oii.jpg" class="achievement-img" alt="Achievement 1">
+  </div>
+</section>
+
+<section id="extracurriculars">
+  <h2>Extracurriculars</h2>
+  <div class="horizontal-scroll">
+    <img src="Screenshot_20250501_082402_LinkedIn.jpg" alt="">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>I am a passionate AI and Data Science student dedicated to building innovative tech solutions. My interests include full-stack development, game dev, and creative problem-solving.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <p>Python&nbsp;&nbsp;&nbsp;HTML&nbsp;&nbsp;&nbsp;CSS&nbsp;&nbsp;&nbsp;JavaScript&nbsp;&nbsp;&nbsp;Flask&nbsp;&nbsp;&nbsp;Machine Learning&nbsp;&nbsp;&nbsp;SQL&nbsp;&nbsp;&nbsp;Git</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>Email: jakeke233@gmail.com</p>
+  <a href="https://www.linkedin.com/in/jagathish-t-ab46102a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app 
+">jagathish </a><br>
+  <a href="https://www.instagram.com/jaxk_rozy?igsh=MXVzeGpqN2RxNWlkMA==">jack</a>
+</section>
+
+<div class="footer">
+  © 2025 jagathish. All rights reserved.
+</div>
+
+</body>
+</html>
